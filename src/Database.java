@@ -2,10 +2,7 @@ import java.sql.*;
 
 public class Database {
     private static Connection con;
-    //This method executes a query and returns the number of albums for the artist with name artistName
     public int getTitles(String artistName) {
-        //Implement this method
-        //Prevent SQL injections!
         int titleNum = 0;
         ResultSet rs = null;
         String sql = "SELECT COUNT(*) AS c FROM album INNER JOIN artist ON album.artistid = artist.artistid WHERE name = ?";
@@ -20,7 +17,6 @@ public class Database {
         return titleNum;
     }
 
-    // This method establishes a DB connection & returns a boolean status
     public boolean establishDBConnection() {
         try {
             Class.forName("org.postgresql.Driver");
