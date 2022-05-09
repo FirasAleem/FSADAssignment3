@@ -3,7 +3,7 @@ import java.net.*;
 
 public class Server {
 
-    public static void main(String args[]) throws IOException {
+    public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = new ServerSocket(Credentials.PORT);
         System.out.println("Server is running");
         Database db = new Database();

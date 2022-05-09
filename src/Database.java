@@ -2,9 +2,10 @@ import java.sql.*;
 
 public class Database {
     private static Connection con;
+
     public int getTitles(String artistName) {
         int titleNum = 0;
-        ResultSet rs = null;
+        ResultSet rs;
         String sql = "SELECT COUNT(*) AS c FROM album INNER JOIN artist ON album.artistid = artist.artistid WHERE name = ?";
         try {
             PreparedStatement pstmt = con.prepareStatement(sql);

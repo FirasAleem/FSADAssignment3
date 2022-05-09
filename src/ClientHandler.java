@@ -6,7 +6,7 @@ public class ClientHandler implements Runnable {
     int clientId;
     Database db;
 
-    public ClientHandler (Socket socket, int clientId, Database db) {
+    public ClientHandler(Socket socket, int clientId, Database db) {
         clientSocket = socket;
         this.clientId = clientId;
         this.db = db;
@@ -18,7 +18,7 @@ public class ClientHandler implements Runnable {
             BufferedReader inFromClient = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             PrintWriter outToClient = new PrintWriter(clientSocket.getOutputStream(), true);
             String clientMessage;
-            while(!(clientMessage = inFromClient.readLine()).equals("stop")) {
+            while (!(clientMessage = inFromClient.readLine()).equals("stop")) {
                 System.out.println("Client sent the artist name " + clientMessage);
                 int titlesNum = db.getTitles(clientMessage);
                 outToClient.println("Number of titles: " + titlesNum + " records found");
@@ -28,6 +28,6 @@ public class ClientHandler implements Runnable {
             inFromClient.close();
             outToClient.close();
             clientSocket.close();
-        }catch (Exception e){}
+        } catch (Exception e) {}
     }
 }
