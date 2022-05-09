@@ -21,5 +21,9 @@ public class Client {
             if (artistName.equals("stop"))
                 break;
         }
+        outToServer.close();
+        inFromServer.close();
+        inFromUser.close();
+        clientSocket.close();
     }
 }
