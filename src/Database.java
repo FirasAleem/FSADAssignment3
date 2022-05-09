@@ -26,7 +26,7 @@ public class Database {
             Class.forName("org.postgresql.Driver");
             con = DriverManager.getConnection(Credentials.URL, Credentials.USERNAME, Credentials.PASSWORD);
             return con.isValid(5);
-        } catch (Exception e) {}
+        } catch (Exception e) {e.printStackTrace();}
         return false;
     }
 }

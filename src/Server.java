@@ -6,13 +6,14 @@ public class Server {
     public static void main(String args[]) throws IOException {
 //      Open the server socket
         ServerSocket serverSocket = new ServerSocket(Credentials.PORT);
-        System.out.println("Server is running" );
+        System.out.println("Server is running");
 
 //          Create a Database object and check the connection with establishDBConnection():
         Database db = new Database();
 //          If the db connection fails, print:
 //                        else, print:
-        if (db.establishDBConnection()){
+
+        if (db.establishDBConnection()) {
             System.out.println("Server is now connected to DB");
             int clientID = 0;
             while (true) {
@@ -22,9 +23,10 @@ public class Server {
                 ClientHandler clientHandler = new ClientHandler(clientSocket, clientID, db);
                 new Thread(clientHandler).start();
             }
-        }else {
+        } else {
             System.out.println("DB connection fail, stopping.");
         }
+
 //
 //
 //              Continuously listen for client requests
