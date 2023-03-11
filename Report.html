@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Firas - A3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <style>
+        * {
+            padding-top: 10px;
+            padding-left: 25px;
+            /*background-color: #1c1c1c;*/
+        }
+        pre {
+            background-color: #363636;
+            color: #c7c7c7;
+            border-radius: 10px;
+        }
+        pre span {
+            color: #f0960e;
+        }
+        table td, table td * {
+            vertical-align: top;
+            horizontal-align: left;
+            padding-right: 40px;
+        }
+        #correct {
+            font-size: 15px;
+            color: green;
+        }
+        #incorrect {
+            font-size: 15px;
+            color:  red;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+<h1 class="display-4">FSAD Assignment 3</h1>
+<h2>Version 0.1</h2>
+
+<h2>Student: Firas A</h2><h3>Total mark: 100/100</h3>
+<div class="d-flex align-items-start"><div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+<button class="nav-link active" id="v-pills-ovv-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ovv" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Overview</button>
+<button class="nav-link" id="v-pills-comprun-tab" data-bs-toggle="pill" data-bs-target="#v-pills-comprun" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Compile Report</button>
+<button class="nav-link" id="v-pills-task1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-task1" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Task 1</button>
+<button class="nav-link" id="v-pills-task2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-task2" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Task 2</button>
+<button class="nav-link" id="v-pills-task3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-task3" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Task 3</button>
+<button class="nav-link" id="v-pills-task4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-task4" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Task 4</button>
+<button class="nav-link" id="v-pills-task5-tab" data-bs-toggle="pill" data-bs-target="#v-pills-task5" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Task 5</button>
+<button class="nav-link" id="v-pills-task6-tab" data-bs-toggle="pill" data-bs-target="#v-pills-task6" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Task 6</button>
+<button class="nav-link" id="v-pills-task7-tab" data-bs-toggle="pill" data-bs-target="#v-pills-task7" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Task 7</button>
+<button class="nav-link" id="v-pills-debug-tab" data-bs-toggle="pill" data-bs-target="#v-pills-debug" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Debug</button>
+</div><div class="tab-content" id="v-pills-tabContent">
+<div class="tab-pane fade show active" id="v-pills-ovv" role="tabpanel" aria-labelledby="v-pills-ovv-tab"><h3>Overview</h3>
+<p>Submitted zip file: <code>aleemfiras_267774_12816467_FSADAssign3_Firas_Aleem_[Redacted].zip</code></p>
+<h4>Marks</h4>
+<p>Task 1: 20/20</p>
+<p>Task 2: 15/15</p>
+<p>Task 3: 15/15</p>
+<p>Task 4: 15/15</p>
+<p>Task 5: 20/20</p>
+<p>Task 6: 5/5</p>
+<p>Task 7: 10/10</p>
+</div>
+<div class="tab-pane fade" id="v-pills-comprun" role="tabpanel" aria-labelledby="v-pills-comprun-tab"><h3>Compile Report</h3>
+<h4>Compile results:</h4>stdout<pre>=== Compile log ===
+TE1 compiled
+TE2 compiled
+TE3 compiled
+TE4 compiled
+</pre>
+</div>
+<div class="tab-pane fade" id="v-pills-task1" role="tabpanel" aria-labelledby="v-pills-task1-tab"><h3>Task 1</h3>
+<p>Checks database connectivity. It is tested in two parts, the first checks that we can connect to the database <br>using a correct Credentials file, the second uses an incorrect credentials file and ensures that we cannot connect. Class tested - Database.</p><p></p><table><tr><td><p>Program output: <br><pre>
+Testing the connection to the DB
+DB connection OK
+
+Testing the connection to the DB
+DB connection fail, stopping.
+</pre></p></td><td><p>Expected output:<br><pre>Testing the connection to the DB
+DB connection OK
+</pre></p></td>
+<td><p><br>
+20/20</p></td></tr></table><hr>
+</div>
+<div class="tab-pane fade" id="v-pills-task2" role="tabpanel" aria-labelledby="v-pills-task2-tab"><h3>Task 2</h3>
+<p>Checks that a simple query can be performed successfully. Class tested - Database.</p><p></p><table><tr><td><p>Program output: <br><pre>
+Testing the query
+Number of titles: 8 records found
+</pre></p></td><td><p>Expected output:<br><pre>Testing the query
+Number of titles: 8 records found
+</pre></p></td>
+<td><p><br>
+15/15</p></td></tr></table><hr>
+</div>
+<div class="tab-pane fade" id="v-pills-task3" role="tabpanel" aria-labelledby="v-pills-task3-tab"><h3>Task 3</h3>
+<p>Checks that prepared statements were used to avoid SQL injection. Class tested - Database.</p><p></p><table><tr><td><p>Program output: <br><pre>
+Testing parametrisation
+Number of titles: 0 records found
+</pre></p></td><td><p>Expected output:<br><pre>Testing parametrisation
+Number of titles: 0 records found
+</pre></p></td>
+<td><p><br>
+15/15</p></td></tr></table><hr>
+</div>
+<div class="tab-pane fade" id="v-pills-task4" role="tabpanel" aria-labelledby="v-pills-task4-tab"><h3>Task 4</h3>
+<p>Checks that the client connects to the server correctly. Class tested - Client.</p><p>Task input:<pre>Metallica
+stop
+
+
+</pre></p><table><tr><td><p>Program output: <br><pre>
+Server is running
+Client connected with IP 127.0.0.1
+Received from client: Metallica
+Received from client: stop
+Connection closed, Goodbye!
+</pre></p></td><td><p>Expected output:<br><pre>Server is running
+Client connected with IP 127.0.0.1
+Received from client: Metallica
+Received from client: stop
+Connection closed, Goodbye!
+</pre></p></td>
+<td><p><br>
+15/15</p></td></tr></table><hr>
+</div>
+<div class="tab-pane fade" id="v-pills-task5" role="tabpanel" aria-labelledby="v-pills-task5-tab"><h3>Task 5</h3>
+<p>Checks client server communication in ClientHandler. Class tested - ClientHandler.</p><p>Task input:<pre>Muse
+Mika
+stop
+</pre></p><table><tr><td><p>Program output: <br><pre>
+Client is running
+Enter the artist name:
+You entered Muse
+FROM SERVER: Number of titles: 8 records found
+Enter the artist name:
+You entered Mika
+FROM SERVER: Number of titles: 0 records found
+Enter the artist name:
+You entered stop
+FROM SERVER: Connection closed, Goodbye!
+</pre></p></td><td><p>Expected output:<br><pre>Client is running
+Enter the artist name:
+You entered Muse
+FROM SERVER: Number of titles: 8 records found
+Enter the artist name:
+You entered Mika
+FROM SERVER: Number of titles: 0 records found
+Enter the artist name:
+You entered stop
+FROM SERVER: Connection closed, Goodbye!
+</pre></p></td>
+<td><p><br>
+20/20</p></td></tr></table><hr>
+</div>
+<div class="tab-pane fade" id="v-pills-task6" role="tabpanel" aria-labelledby="v-pills-task6-tab"><h3>Task 6</h3>
+<p>Checks that the server can accept a client. Class tested - Server.</p><p>Task input:<pre>stop
+
+</pre></p><table><tr><td><p>Program output: <br><pre>
+Server is running
+Server is now connected to DB
+Client 1 connected with IP 127.0.0.1
+ClientHandler started...
+Client 1 has disconnected
+</pre></p></td><td><p>Expected output:<br><pre>Server is running
+Server is now connected to DB
+Client 1 connected with IP 127.0.0.1
+ClientHandler started...
+Client 1 has disconnected
+</pre></p></td>
+<td><p><br>
+5/5</p></td></tr></table><hr>
+</div>
+<div class="tab-pane fade" id="v-pills-task7" role="tabpanel" aria-labelledby="v-pills-task7-tab"><h3>Task 7</h3>
+<p>Checks that the server can accept multiple clients. Class tested - Server.</p><p>Task input:<pre>stop
+
+</pre></p><table><tr><td><p>Program output: <br><pre>
+Server is running
+Server is now connected to DB
+Client 1 connected with IP 127.0.0.1
+ClientHandler started...
+Client 1 has disconnected
+Client 2 connected with IP 127.0.0.1
+ClientHandler started...
+Client 2 has disconnected
+Client 3 connected with IP 127.0.0.1
+ClientHandler started...
+Client 3 has disconnected
+</pre></p></td><td><p>Expected output:<br><pre>Server is running
+Server is now connected to DB
+Client 1 connected with IP 127.0.0.1
+ClientHandler started...
+Client 1 has disconnected
+Client 2 connected with IP 127.0.0.1
+ClientHandler started...
+Client 2 has disconnected
+Client 3 connected with IP 127.0.0.1
+ClientHandler started...
+Client 3 has disconnected
+</pre></p></td>
+<td><p><br>
+10/10</p></td></tr></table><hr>
+</div>
+<div class="tab-pane fade" id="v-pills-debug" role="tabpanel" aria-labelledby="v-pills-debug-tab"><h3>Debug</h3>
+<p>=== Full log for 267774 ===<br>=== Setup started ===<br>Checking assignment submission<br>-> Assignment submission file found: aleemfiras_267774_12816467_FSADAssign3_Firas_Aleem_[Redacted.zip<br>Extracting canvas id<br>-> Canvas id extracted: 267774<br>Decompressing zip file<br>-> Decompression successful<br>Cleaning up extracted data<br>-> Data cleaned<br>Creating marking environments<br>-> Marking environments created<br>=== Setup complete ===<br>=== Marking started ===<br>-> Compiled TE1 successfully<br>-> Compiled TE2 successfully<br>-> Compiled TE3 successfully<br>-> Compiled TE4 successfully<br>--- Running Test 1 part 1<br>-> Test 1 part 1 successfully run<br>-> Outputs equal - now need to check part 2<br>--- Running Test 1 part 2<br>-> Compilation of incorrect Credentials.java file successful<br>-> Test 1 part 2 run successful<br>-> Test 1 part 2 result:<br>Testing the connection to the DB<br>DB connection fail, stopping.<br><br>-> Outputs not equal (+20 marks)<br>-> Cleaning up environment<br>--- Running Test 2<br>-> Test 2 successfully run<br>-> Outputs equal (+15 marks)<br>--- Running Test 3<br>-> Test 3 successfully run<br>-> Outputs are equal (+15 marks)<br>--- Running Test 4<br>-> Test 4 successfully run<br>-> Outputs equal (+15 marks)<br>--- Running Test 5<br>-> Test 5 successfully run<br>-> Outputs equal (+20 marks)<br>--- Running Test 6<br>-> Test 6 successfully run<br>-> Outputs equal (+5 marks)<br>--- Running Test 7<br>-> Test 7 connecting clients<br>-> Outputs equal (+10 marks)<br>=== Marking stopped ===</p>
+</div>
+</div></body></html>
